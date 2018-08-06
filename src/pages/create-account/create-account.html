@@ -48,6 +48,8 @@
   <ion-item no-lines class="error-text" [ngClass]="{hiding:(email.valid || email.pristine),show:(!(email.valid || email.pristine) || (emailError) )}" >
       Hmm...This email seems invalid.
   </ion-item>
+  <ion-item [hidden]="!sameError" class="Error-Text">Oops! This email matches an existing user's.</ion-item>
+  
 
   <ion-item class="input-group">
       <ion-label floating class="label">Password</ion-label>
